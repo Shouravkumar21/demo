@@ -1,186 +1,157 @@
-  # demo
-this is the first repository 
+ # Demo
+This is the first repository  
 <br>
-author- prince kumar
+**Author:** Prince Kumar  
 
-######### javascript interview question? ####################
+---
 
-जावास्क्रिप्ट क्या है?
-उत्तर:
-जावास्क्रिप्ट एक हल्की, इंटरप्रेटेड प्रोग्रामिंग भाषा है जिसका उपयोग वेब पेज को डायनामिक और इंटरएक्टिव बनाने के लिए किया जाता है।
+# 📌 JavaScript Interview Questions
 
-2. जावास्क्रिप्ट में डेटा प्रकार (Data Types) कौन-कौन से हैं?
-उत्तर:
+### 1. What is JavaScript?
+**Answer:**
+JavaScript is a lightweight, interpreted programming language used to make web pages dynamic and interactive.
 
-प्रिमिटिव प्रकार: String, Number, Boolean, Undefined, Null, Symbol, BigInt।
-नॉन-प्रिमिटिव प्रकार: Object (जिसमें Arrays और Functions शामिल हैं)।
-3. let, var और const में क्या अंतर है?
-उत्तर:
+### 2. What are the data types in JavaScript?
+**Answer:**
+- **Primitive Types:** String, Number, Boolean, Undefined, Null, Symbol, BigInt.  
+- **Non-Primitive Types:** Object (including Arrays and Functions).
 
-var: फ़ंक्शन-स्कोप में काम करता है, दोबारा डिक्लेयर किया जा सकता है।
-let: ब्लॉक-स्कोप में काम करता है, दोबारा डिक्लेयर नहीं किया जा सकता।
-const: ब्लॉक-स्कोप में काम करता है और इसे रीअसाइन नहीं किया जा सकता।
+### 3. What is the difference between `let`, `var`, and `const`?
+**Answer:**
+- `var`: Function-scoped, can be redeclared.
+- `let`: Block-scoped, cannot be redeclared.
+- `const`: Block-scoped, cannot be reassigned.
 
-4. == और === में क्या अंतर है?
-उत्तर:
+### 4. Difference between `==` and `===`?
+**Answer:**
+- `==` : Checks equality after type conversion.
+- `===` : Checks equality without type conversion.
 
-==: यह टाइप कन्वर्जन (Type Conversion) के बाद समानता की जांच करता है।
-===: यह बिना टाइप कन्वर्जन के समानता की जांच करता है।
-
-5. जावास्क्रिप्ट में फ़ंक्शन्स क्या हैं?
-उत्तर:
-फ़ंक्शन कोड का एक ब्लॉक होता है जो कोई विशिष्ट कार्य करता है।
-उदाहरण:
-
-javascript
-Copy code
-function जोड़ें(a, b) {
+### 5. What are functions in JavaScript?
+**Answer:**
+A function is a block of code that performs a specific task.
+```javascript
+function add(a, b) {
   return a + b;
 }
+```
 
-6. कॉलबैक फ़ंक्शन (Callback Function) क्या होता है?
-उत्तर:
-कॉलबैक एक ऐसा फ़ंक्शन है जिसे दूसरे फ़ंक्शन के तर्क (argument) के रूप में पास किया जाता है और बाद में इसे निष्पादित किया जाता है।
-उदाहरण:
-
-javascript
-Copy code
-function अभिवादन(नाम, callback) {
-  callback(नाम);
+### 6. What is a Callback Function?
+**Answer:**
+A callback function is a function passed as an argument to another function and executed later.
+```javascript
+function greet(name, callback) {
+  callback(name);
 }
-अभिवादन("अलिस", (नाम) => console.log("नमस्ते " + नाम));
+greet("Alice", (name) => console.log("Hello " + name));
+```
 
-7. undefined और null में क्या अंतर है?
-उत्तर:
+### 7. Difference between `undefined` and `null`?
+**Answer:**
+- `undefined`: A variable is declared but not assigned a value.
+- `null`: Represents intentional absence of a value.
 
-undefined: जब किसी वेरिएबल को डिक्लेयर किया जाता है लेकिन उसे वैल्यू नहीं दी जाती।
-null: एक जानबूझकर वैल्यू की अनुपस्थिति को दर्शाता है।
-
-8. जावास्क्रिप्ट में क्लोजर (Closures) क्या होते हैं?
-उत्तर:
-क्लोजर एक ऐसा फ़ंक्शन है जो बाहरी फ़ंक्शन के वेरिएबल्स तक पहुंच सकता है, भले ही बाहरी फ़ंक्शन समाप्त हो गया हो।
-उदाहरण:
-
-javascript
-Copy code
-function बाहरी() {
-  let काउंट = 0;
-  return function आंतरिक() {
-    काउंट++;
-    return काउंट;
+### 8. What are Closures in JavaScript?
+**Answer:**
+A closure is a function that can access variables from its outer function even after the outer function has finished execution.
+```javascript
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
   };
 }
-const बढ़ाएं = बाहरी();
-console.log(बढ़ाएं()); // 1
+const increment = outer();
+console.log(increment()); // 1
+```
 
-9. होस्टिंग (Hoisting) क्या है?
-उत्तर:
-होस्टिंग वह प्रक्रिया है जिसमें जावास्क्रिप्ट वेरिएबल और फ़ंक्शन डिक्लेरेशन को स्कोप के शीर्ष पर ले जाता है।
+### 9. What is Hoisting?
+**Answer:**
+Hoisting is JavaScript’s behavior of moving variable and function declarations to the top of their scope.
 
-10. जावास्क्रिप्ट में टेम्पलेट लिटरल्स (Template Literals) क्या हैं?
-उत्तर:
-टेम्पलेट लिटरल्स बैकटिक्स (`) का उपयोग करते हुए स्ट्रिंग्स लिखने का तरीका है जिसमें ${} के अंदर एक्सप्रेशन का उपयोग किया जा सकता है।
-उदाहरण:
+### 10. What are Template Literals?
+**Answer:**
+Template literals use backticks (`` ` ``) to allow string interpolation.
+```javascript
+const name = "Alice";
+console.log(`Hello, ${name}!`);
+```
 
-javascript
-Copy code
-const नाम = "अलिस";
-console.log(नमस्ते, ${नाम}!);
+### 11. What are JavaScript Objects?
+**Answer:**
+Objects store key-value pairs.
+```javascript
+const person = { name: "Alice", age: 25 };
+```
 
-11. जावास्क्रिप्ट ऑब्जेक्ट्स क्या हैं?
-उत्तर:
-ऑब्जेक्ट्स कुंजी-मूल्य (Key-Value) के जोड़े होते हैं।
-उदाहरण:
+### 12. What is an Array in JavaScript?
+**Answer:**
+An array is a collection of data stored in a single variable.
+```javascript
+const fruits = ["Apple", "Banana", "Cherry"];
+```
 
-javascript
-Copy code
-const व्यक्ति = { नाम: "अलिस", उम्र: 25 };
-12. जावास्क्रिप्ट में एरे (Array) क्या है?
-उत्तर:
-एरे डेटा का एक संग्रह है जिसे एक ही वेरिएबल में संग्रहीत किया जाता है।
-उदाहरण:
+### 13. What is an Arrow Function?
+**Answer:**
+An arrow function provides a shorter syntax for writing functions.
+```javascript
+const add = (a, b) => a + b;
+```
 
-javascript
-Copy code
-const फल = ["सेब", "केला", "चेरी"];
+### 14. Difference between `map()` and `forEach()`?
+**Answer:**
+- `map()`: Returns a new array.
+- `forEach()`: Executes a function for each array item but does not return a new array.
 
-13. एरो फ़ंक्शन (Arrow Function) क्या है?
-उत्तर:
-एरो फ़ंक्शन जावास्क्रिप्ट में फ़ंक्शन लिखने का एक संक्षिप्त तरीका है।
-उदाहरण:
+### 15. What is the purpose of `typeof`?
+**Answer:**
+The `typeof` operator checks the data type of a variable.
+```javascript
+console.log(typeof "Hello"); // string
+```
 
-javascript
-Copy code
-const जोड़ें = (a, b) => a + b;
+### 16. What is a JavaScript Promise?
+**Answer:**
+A Promise is used to handle asynchronous operations.
 
-14. map() और forEach() में क्या अंतर है?
-उत्तर:
+### 17. What are Events?
+**Answer:**
+Events are browser or user actions such as `click`, `mouseover`, or `keydown`.
 
-map(): एक नया एरे रिटर्न करता है।
-forEach(): केवल एरे के हर आइटम पर ऑपरेशन करता है।
+### 18. What does `this` refer to?
+**Answer:**
+`this` refers to the object that is currently executing the code.
 
-15. typeof का उपयोग क्या है?
-उत्तर:
-typeof किसी वेरिएबल का प्रकार (Type) जांचने के लिए उपयोग होता है।
-उदाहरण:
+### 19. What is the DOM?
+**Answer:**
+The Document Object Model (DOM) represents the structure of an HTML document and allows JavaScript to modify it.
 
-javascript
-Copy code
-console.log(typeof "नमस्ते"); // string
+### 20. What is `setTimeout()` used for?
+**Answer:**
+`setTimeout()` executes a function after a specified delay.
+```javascript
+setTimeout(() => console.log("Hello"), 1000);
+```
 
-16. जावास्क्रिप्ट प्रॉमिस (Promise) क्या है?
-उत्तर:
-प्रॉमिस असिंक्रोनस ऑपरेशन्स को हैंडल करने के लिए उपयोग होता है।
+### 21. What does `setInterval()` do?
+**Answer:**
+`setInterval()` repeatedly executes a function at specified intervals.
 
-17. इवेंट क्या है?
-उत्तर:
-इवेंट्स ब्राउज़र या उपयोगकर्ता की गतिविधियाँ होती हैं जैसे click, mouseover, या keydown।
+### 22. What is `NaN`?
+**Answer:**
+`NaN` stands for "Not-a-Number" and occurs when a mathematical operation fails.
 
-18. this क्या दर्शाता है?
-उत्तर:
-this उस ऑब्जेक्ट को दर्शाता है जो वर्तमान में कोड चला रहा है।
+### 23. What is the Spread Operator (`...`)?
+**Answer:**
+The spread operator expands array or object elements.
+```javascript
+const arr = [1, 2, 3];
+console.log([...arr, 4, 5]); // [1, 2, 3, 4, 5]
+```
 
-19. DOM क्या है?
-उत्तर:
-DOM (Document Object Model) HTML दस्तावेज़ की संरचना को दर्शाता है, जिसे जावास्क्रिप्ट से संशोधित किया जा सकता है।
-
-20. setTimeout() का उपयोग क्या है?
-उत्तर:
-setTimeout() किसी फ़ंक्शन को निर्दिष्ट समय के बाद चलाने के लिए उपयोग होता है।
-उदाहरण:
-
-javascript
-Copy code
-setTimeout(() => console.log("नमस्ते"), 1000);
-21. setInterval() क्या करता है?
-उत्तर:
-setInterval() किसी फ़ंक्शन को हर निर्दिष्ट अंतराल पर बार-बार चलाने के लिए उपयोग होता है।
-
-22. NaN का मतलब क्या है?
-उत्तर:
-NaN का मतलब "Not-a-Number" है। यह गणितीय ऑपरेशन के असफल होने का संकेत है।
-
-23. स्प्रेड ऑपरेटर (...) क्या है?
-उत्तर:
-स्प्रेड ऑपरेटर एरे या ऑब्जेक्ट की सामग्री को विस्तारित करने के लिए उपयोग होता है।
-उदाहरण:
-
-javascript
-Copy code
-const संख्याएँ = [1, 2, 3];
-console.log([...संख्याएँ, 4]); // [1, 2, 3, 4]
-
-24. डिस्ट्रक्चरिंग (Destructuring) क्या है?
-उत्तर:
-डिस्ट्रक्चरिंग का उपयोग एरे या ऑब्जेक्ट से मान निकालने के लिए किया जाता है।
-
-25. सिंक्रोनस और असिंक्रोनस कोड में क्या अंतर है?
-उत्तर:
-
-सिंक्रोनस: कोड क्रम में चलता है।
-असिंक्रोनस: कोड अगले कार्य को ब्लॉक किए बिना चलता है।
-क्या आप और भी प्रश्नों की सूची चाहते हैं
-
+---
+Feel free to contribute and add more questions! 🚀
 
 #### javascript question ? ################
 
